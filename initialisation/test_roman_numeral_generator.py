@@ -1,5 +1,11 @@
 import unittest
+import pytest
 from initialisation.roman_numeral_generator import RomanNumeralGenerator
+
+@pytest.mark.parametrize("test_input,expected", [(1, 'I'), (2, 'II'), (3, 'III'), (4, 'IV')])
+def test_eval(test_input, expected):
+    RomanNumeralGenerator.generator(test_input)
+    assert eval(test_input) == expected
 
 class RomanNumeralTestCase(unittest.TestCase):
     # Tests for `roman_numeral_generator.py`
