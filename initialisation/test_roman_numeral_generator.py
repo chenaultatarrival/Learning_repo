@@ -2,10 +2,10 @@ import unittest
 import pytest
 from initialisation.roman_numeral_generator import RomanNumeralGenerator
 
-@pytest.mark.parametrize("test_input,expected", [(1, 'I'), (2, 'II'), (3, 'III'), (4, 'IV')])
-def test_eval(test_input, expected):
-    RomanNumeralGenerator.generator(test_input)
-    assert eval(test_input) == expected
+#@pytest.mark.parametrize("test_input,expected", [(1, 'I'), (2, 'II'), (3, 'III'), (4, 'IV')])
+#def test_eval(test_input, expected):
+#    RomanNumeralGenerator.generator(test_input)
+#    assert eval(test_input) == expected
 
 class RomanNumeralTestCase(unittest.TestCase):
     # Tests for `roman_numeral_generator.py`
@@ -33,6 +33,16 @@ class RomanNumeralTestCase(unittest.TestCase):
     def test_four(self):
         result = self.testclass.generator(4)
         self.assertEqual(result, 'IV')
+    
+    def test_five(self):
+        result = self.testclass.generator(5)
+        self.assertEqual(result, 'V')
+    
+    def test_six(self):
+        result = self.testclass.generator(6)
+        self.assertEqual(result, 'VI')
+
+    
  
 if __name__ == '__main__':
     unittest.main()
