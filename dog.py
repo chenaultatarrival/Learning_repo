@@ -1,6 +1,5 @@
 from unicodedata import name
 
-
 class Dog:
     animal_type = "canine"
 
